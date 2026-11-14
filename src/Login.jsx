@@ -51,7 +51,10 @@ export default function Login({ onLoginSuccess, language, onLanguageChange }) {
   };
 
   return (
-    <div className={`login-wrapper login-wrapper--${role}`}>
+    <div
+      className={`login-wrapper login-wrapper--${role}`}
+      style={{ '--login-background-image': `url("${import.meta.env.BASE_URL}images/${role === 'doctor' ? 'doctor-login-ecg.png' : 'login-heart-care.png'}")` }}
+    >
       <div className="login-box">
         <div className="login-language"><LanguageSelect language={language} onChange={onLanguageChange} /></div>
         <div className="hospital-header">

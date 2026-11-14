@@ -221,7 +221,11 @@ function DoctorRecommendationForm({ patient, doctorName, language, onSend }) {
 }
 
 function PortalLayout({ user, onLogout, language, onLanguageChange, title, children }) {
-  return <div className={`portal-shell portal-shell--${user.role}`}>
+  const backgroundImage = user.role === 'doctor' ? 'doctor-heart-care.png' : 'patient-care.jpg';
+  return <div
+    className={`portal-shell portal-shell--${user.role}`}
+    style={{ '--portal-background-image': `url("${import.meta.env.BASE_URL}images/${backgroundImage}")` }}
+  >
     <header className="portal-header">
       <div className="brand"><span className="brand-icon">🏥</span><div><strong>City Heart Hospital</strong><span>{t(language, 'subtitle')}</span></div></div>
       <div className="header-actions"><span className="signed-in">{t(language, 'signedInAs')} <strong>{t(language, user.role)}</strong></span><LanguageSelect language={language} onChange={onLanguageChange} /><button className="logout-button" onClick={onLogout}>{t(language, 'logout')}</button></div>
