@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.login-wrapper {
+  min-height: 100vh;
+  background-color: #eef2f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 30px 25px;
+}
+
+.hospital-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.hospital-icon {
+  font-size: 40px;
+}
+
+.hospital-header h2 {
+  margin: 5px 0 2px 0;
+  color: #0f172a;
+  font-size: 22px;
+}
+
+.hospital-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Tabs */
+.role-tab-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  background: #f1f5f9;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px 10px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active-patient {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+.tab-btn.active-doctor {
+  background: #0d9488;
+  color: #ffffff;
+}
+
+/* Form inputs */
+.input-field {
+  margin-bottom: 18px;
+}
+
+.input-field label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.input-field input:focus {
+  border-color: #0284c7;
+  outline: none;
+}
+
+/* Submit Buttons */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.pat-btn {
+  background-color: #0284c7;
+}
+
+.pat-btn:hover {
+  background-color: #0369a1;
+}
+
+.doc-btn {
+  background-color: #0d9488;
+}
+
+.doc-btn:hover {
+  background-color: #0f766e;
+}
